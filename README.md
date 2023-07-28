@@ -64,11 +64,11 @@ public var body: some View {
 ### [CocoaPods](http://cocoapods.org)
 
 1. Install the latest release of CocoaPods: `gem install cocoapods`
-2. Add this line to your Podfile: `pod 'LTMorphingLabel'`
+2. Add this line to your Podfile: `pod 'ThenMorphingLabel'`
 3. Install the pod: `pod install`
 
 ## Usage
 
-1. Change the class of a label from UILabel to LTMorphingLabel;
+1. Change the class of a label from UILabel to ThenMorphingLabel;
 2. Programmatically set a new String to its text property.
 3. To use interactively, call `.pause()` after changing `.text` property, and use `updateProgress(progress: Float)`to update the progress interactively.
