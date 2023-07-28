@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IAM-hL-9eW">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LTMorphingLabel Demo-->
+        <scene sceneID="vlG-gG-Crg">
+            <objects>
+                <viewController id="3ei-2r-m0A" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D5d-Wo-IoW">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rE7-Va-JH8">
+                                <rect key="frame" x="20" y="275" width="627" height="29"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.0019310983707021894" blue="0.56318024254760291" alpha="0.69539221938775508" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="fIE-hM-Ab0"/>
+                                    <constraint firstAttribute="height" constant="28" id="vaZ-df-xh8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Scale"/>
+                                    <segment title="Evaporate"/>
+                                    <segment title="Fall"/>
+                                    <segment title="Pixelate"/>
+                                    <segment title="Sparkle"/>
+                                    <segment title="Burn"/>
+                                    <segment title="Anvil"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.73333333329999995" green="0.0039215686269999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="3ei-2r-m0A" eventType="valueChanged" id="rRV-iJ-mWz"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VJ-mH-2Xe">
+                                <rect key="frame" x="20" y="52" width="627" height="203"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.73750000000000004" green="0.0" blue="0.56877266069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeText:" destination="3ei-2r-m0A" eventType="touchUpInside" id="wca-7v-rZP"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ucn-av-UN6">
+                                <rect key="frame" x="20" y="325" width="120" height="29"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.0019310983710000001" blue="0.56318024249999998" alpha="0.69539221939999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9pE-1U-E4A"/>
+                                    <constraint firstAttribute="height" constant="28" id="TLk-pB-ubA"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Night"/>
+                                    <segment title="Day"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.73333333329999995" green="0.0039215686269999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="toggleLight:" destination="3ei-2r-m0A" eventType="valueChanged" id="SHB-V1-FQz"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="26" minValue="9" maxValue="42" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-vo-0jD">
+                                <rect key="frame" x="168" y="323" width="477" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uft-oC-aVu"/>
+                                </constraints>
+                                <color key="maximumTrackTintColor" red="0.30549782390000002" green="0.0" blue="0.2343322595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.73414486649999999" green="0.003415785264" blue="0.56606709960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="3ei-2r-m0A" eventType="valueChanged" id="RPG-Ij-VXw"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm LTMorphingLabel. Tap Me Please." textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-dc-WVn" customClass="ThenMorphingLabel" customModule="ThenMorphingLabel">
+                                <rect key="frame" x="20" y="52" width="627" height="203"/>
+                                <accessibility key="accessibilityConfiguration" identifier="morphingLabel" label="morphingLabel"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="3"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-Hn-KaX">
+                                <rect key="frame" x="594" y="224" width="51" height="31"/>
+                                <color key="onTintColor" red="0.61243192365132471" green="0.0" blue="0.46976621517848066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.73414486649999999" green="0.003415785264" blue="0.56606709960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="updateAutoStart:" destination="3ei-2r-m0A" eventType="valueChanged" id="uct-K6-Dxl"/>
+                                </connections>
+                            </switch>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="170" translatesAutoresizingMaskIntoConstraints="NO" id="SYv-GM-ZcQ">
+                                <rect key="frame" x="18" y="224.5" width="559" height="31"/>
+                                <color key="maximumTrackTintColor" red="0.30549782391039204" green="0.0" blue="0.23433225954000511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.73414486646652222" green="0.003415785264223814" blue="0.56606709957122803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="updateProgress:" destination="3ei-2r-m0A" eventType="valueChanged" id="Wq3-xc-LMd"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="upB-mu-6Xz"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.73750000000000004" green="0.0" blue="0.56877266069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EOd-vo-0jD" firstAttribute="top" secondItem="rE7-Va-JH8" secondAttribute="bottom" constant="20" id="7ro-9X-VKm"/>
+                            <constraint firstItem="SYv-GM-ZcQ" firstAttribute="leading" secondItem="upB-mu-6Xz" secondAttribute="leading" constant="20" id="DbV-iG-EcM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EOd-vo-0jD" secondAttribute="trailing" constant="4" id="DrY-mw-8sU"/>
+                            <constraint firstItem="fqc-dc-WVn" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="FRI-HA-iwA"/>
+                            <constraint firstItem="rE7-Va-JH8" firstAttribute="top" secondItem="3VJ-mH-2Xe" secondAttribute="bottom" constant="20" id="FbJ-XZ-R2b"/>
+                            <constraint firstItem="fqc-dc-WVn" firstAttribute="top" secondItem="upB-mu-6Xz" secondAttribute="top" constant="20" id="JLl-ED-669"/>
+                            <constraint firstItem="SYv-GM-ZcQ" firstAttribute="centerY" secondItem="lO7-Hn-KaX" secondAttribute="centerY" id="SSM-o6-i6w"/>
+                            <constraint firstItem="EOd-vo-0jD" firstAttribute="leading" secondItem="Ucn-av-UN6" secondAttribute="trailing" constant="30" id="TpR-XE-wc6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rE7-Va-JH8" secondAttribute="trailing" id="URl-uL-VkH"/>
+                            <constraint firstItem="rE7-Va-JH8" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="Uv1-gH-Yw5"/>
+                            <constraint firstItem="Ucn-av-UN6" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="ato-cL-hIr"/>
+                            <constraint firstItem="lO7-Hn-KaX" firstAttribute="leading" secondItem="SYv-GM-ZcQ" secondAttribute="trailing" constant="19" id="cYN-Mq-FvX"/>
+                            <constraint firstItem="3VJ-mH-2Xe" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="d9f-iq-G1D"/>
+                            <constraint firstItem="rE7-Va-JH8" firstAttribute="top" secondItem="lO7-Hn-KaX" secondAttribute="bottom" constant="20" id="dov-c6-FLk"/>
+                            <constraint firstItem="3VJ-mH-2Xe" firstAttribute="top" secondItem="upB-mu-6Xz" secondAttribute="top" constant="20" id="ev9-ly-VWf"/>
+                            <constraint firstItem="upB-mu-6Xz" firstAttribute="bottom" secondItem="Ucn-av-UN6" secondAttribute="bottom" constant="22" id="fFq-dK-A0i"/>
+                            <constraint firstItem="upB-mu-6Xz" firstAttribute="bottom" secondItem="EOd-vo-0jD" secondAttribute="bottom" constant="22" id="grd-XJ-WqJ"/>
+                            <constraint firstItem="fqc-dc-WVn" firstAttribute="trailing" secondItem="D5d-Wo-IoW" secondAttribute="trailingMargin" id="izu-ll-ljE"/>
+                            <constraint firstItem="rE7-Va-JH8" firstAttribute="top" secondItem="fqc-dc-WVn" secondAttribute="bottom" constant="20" id="k9Z-OZ-VrU"/>
+                            <constraint firstItem="3VJ-mH-2Xe" firstAttribute="trailing" secondItem="D5d-Wo-IoW" secondAttribute="trailingMargin" id="o8d-0t-cq2"/>
+                            <constraint firstItem="upB-mu-6Xz" firstAttribute="trailing" secondItem="lO7-Hn-KaX" secondAttribute="trailing" constant="24" id="oPt-lM-mnb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LTMorphingLabel Demo" id="A7j-8h-CTu">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="Bsc-Fz-3C2">
+                            <color key="tintColor" red="1" green="0.0" blue="0.78291556679999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="clear:" destination="3ei-2r-m0A" id="JHT-bA-GcN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="autoStart" destination="lO7-Hn-KaX" id="6UG-Ps-ekd"/>
+                        <outlet property="effectSegmentControl" destination="rE7-Va-JH8" id="7jF-P0-vfe"/>
+                        <outlet property="label" destination="fqc-dc-WVn" id="glJ-ku-ziP"/>
+                        <outlet property="progressSlider" destination="SYv-GM-ZcQ" id="Qhe-p3-cbZ"/>
+                        <outlet property="themeSegmentControl" destination="Ucn-av-UN6" id="n1V-0F-lBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOt-ne-B2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850.824587706147" y="72.799999999999997"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BST-oi-p39">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IAM-hL-9eW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Cel-o5-IrA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="V1l-3x-LRf">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.00019225223670915614" blue="0.803035042899366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3ei-2r-m0A" kind="relationship" relationship="rootViewController" id="Pr8-Cq-f6N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcq-7b-9Jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="-700"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="fqc-dc-WVn">
+            <size key="intrinsicContentSize" width="420" height="31"/>
+        </designable>
+    </designables>
+</document>
